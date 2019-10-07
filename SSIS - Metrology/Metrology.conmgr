@@ -6,8 +6,8 @@
   <DTS:ObjectData>
     <ODataConnectionManager
       UserName=""
-      Url="http://teams.network.int/local/GSOSK/metrology/_vti_bin/listdata.svc/"
-      ConnectionString="Service Document Url=http://teams.network.int/local/GSOSK/metrology/_vti_bin/listdata.svc/;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=SSPI;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104"
+      Url="http://teams.network.int/local/GSOSK/metrology/_vti_bin/listdata.svc"
+      ConnectionString="Service Document Url=http://teams.network.int/local/GSOSK/metrology/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=SSPI;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104"
       MicrosoftOnlineServicesAuth="False"
       AuthType="WindowsAuthentication" />
   </DTS:ObjectData>

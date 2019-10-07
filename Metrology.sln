@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS - Metrology", "SSIS - Metrology\SSIS - Metrology.dtproj", "{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRS - Metrology", "SSRS - Metrology\SSRS - Metrology.rptproj", "{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Development|Default = Development|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}.Debug|Default.ActiveCfg = Development
+		{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}.Debug|Default.Build.0 = Development
+		{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}.DebugLocal|Default.ActiveCfg = Development
+		{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}.DebugLocal|Default.Build.0 = Development
+		{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}.Development|Default.ActiveCfg = Development
+		{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}.Development|Default.Build.0 = Development
+		{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}.Release|Default.ActiveCfg = Development
+		{E95422BB-7FCB-4F93-A079-D24CDDCD56E1}.Release|Default.Build.0 = Development
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Debug|Default.ActiveCfg = Debug
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Debug|Default.Build.0 = Debug
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Debug|Default.Deploy.0 = Debug
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.DebugLocal|Default.Build.0 = DebugLocal
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Development|Default.ActiveCfg = 
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Development|Default.Build.0 = 
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Development|Default.Deploy.0 = 
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Release|Default.ActiveCfg = Release
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Release|Default.Build.0 = Release
+		{DBD130A3-3FF5-4AA6-B6F0-67C79791D980}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B897CD68-F7C2-4591-956B-D75EFA96E4A5}
+	EndGlobalSection
+EndGlobal

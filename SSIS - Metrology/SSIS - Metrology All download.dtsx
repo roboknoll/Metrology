@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/12/2019 8:05:09 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PC0163980"
+  DTS:CreatorName="DANFOSS\A119097"
+  DTS:DTSID="{A2CD1C67-664D-4447-911D-BAC58E1241E6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1051"
+  DTS:ObjectName="SSIS - Metrology All download"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{55D4E1A9-A78E-4D95-91C9-3992AAA0FF94}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{AD498598-8334-40EE-A2C9-713F84F2EF69}"
+      DTS:ObjectName="admin_recepients">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">rknoll@danfoss.com</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SSIS - Metrology download"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{ACB07B22-E4F7-4BAE-9978-BBFFE24BFC88}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SSIS - Metrology download"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>SSIS - Metrology download.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SSIS - Metrology LKC download"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{0B8F1433-60B0-4BA8-B6A9-779ACFD8F2B8}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SSIS - Metrology LKC download"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>SSIS - Metrology LKC download.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SSIS - Zeiss Calypso 2018 File Import"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{438F398D-BE1C-40F5-99FB-0F460DC2865B}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SSIS - Zeiss Calypso 2018 File Import"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>SSIS - Zeiss Calypso 2018 File Import.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Send Warning Mail"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Send Mail Task"
+      DTS:DTSID="{56b16715-d87b-450e-86a1-00f57a2a4b4c}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Send Warning Mail"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="ToLine">@[$Package::admin_recepients]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{9D694C36-0A32-41BF-8B80-7BE9CF96180D}"
+          SendMailTask:From="SSISexecutor@danfoss.com"
+          SendMailTask:To="rknoll@danfoss.com"
+          SendMailTask:Subject="Metrology download all jobs failed"
+          SendMailTask:Priority="High"
+          SendMailTask:MessageSource="The job for download metrology data failed.&#xA;&#xA;Check jobs&#xA;- Metrology download&#xA;- Zeiss Calypso 2018 File Impor&#xA;- Metrology LKC download" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{8420515F-70DC-49AA-B36E-16F0EE69E35D}"
+      DTS:From="Package\Execute SSIS - Metrology download"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Execute SSIS - Zeiss Calypso 2018 File Import"
+      DTS:Value="2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B77F166C-4E2C-4698-A9DF-BBC23782C7A2}"
+      DTS:From="Package\Execute SSIS - Metrology download"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Send Warning Mail"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{B1794CE2-3A6D-47DD-A909-A4FA34647524}"
+      DTS:From="Package\Execute SSIS - Zeiss Calypso 2018 File Import"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Execute SSIS - Metrology LKC download"
+      DTS:Value="2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{42742DBD-FC6D-4D57-8F72-2282C1366FA3}"
+      DTS:From="Package\Execute SSIS - Zeiss Calypso 2018 File Import"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Send Warning Mail"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{19D67BC5-24D1-42A3-88C7-37CEA2BD9074}"
+      DTS:From="Package\Execute SSIS - Metrology LKC download"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Send Warning Mail"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="306.4,41.6"
+          Id="Package\Execute SSIS - Metrology download"
+          TopLeft="69.99999721845,79.733333966997" />
+        <NodeLayout
+          Size="306.4,41.6"
+          Id="Package\Execute SSIS - Metrology LKC download"
+          TopLeft="69.99999721845,275.946668859694" />
+        <NodeLayout
+          Size="306.4,41.6"
+          Id="Package\Execute SSIS - Zeiss Calypso 2018 File Import"
+          TopLeft="69.99999721845,177.840001413345" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Send Warning Mail"
+          TopLeft="475.333314445284,179.146667702569" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="173.466663885117,121.333333966997">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.7333333333333,56.5066674463484"
+              Start="0,0"
+              End="49.7333333333333,49.0066674463484">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7787916562942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7787916562942"
+                    Point2="0,22.7787916562942"
+                    Point3="4,22.7787916562942" />
+                  <mssgle:LineSegment
+                    End="45.7333333333333,22.7787916562942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.7333333333333,22.7787916562942"
+                    Point2="49.7333333333333,22.7787916562942"
+                    Point3="49.7333333333333,26.7787916562942" />
+                  <mssgle:LineSegment
+                    End="49.7333333333333,49.0066674463484" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.437786458333342,27.7787916562942,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="272.933330551783,121.333333966997">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="285.999983893501,57.8133337355719"
+              Start="0,0"
+              End="285.999983893501,50.3133337355719">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.3055308980799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.3055308980799"
+                    Point2="0,23.3055308980799"
+                    Point3="4,23.3055308980799" />
+                  <mssgle:LineSegment
+                    End="281.999983893501,23.3055308980799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="281.999983893501,23.3055308980799"
+                    Point2="285.999983893501,23.3055308980799"
+                    Point3="285.999983893501,27.3055308980799" />
+                  <mssgle:LineSegment
+                    End="285.999983893501,50.3133337355719" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="127.758644290501,28.3055308980799,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="223.19999721845,219.440001413345">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-49.7333333333333,56.5066674463484"
+              Start="0,0"
+              End="-49.7333333333333,49.0066674463484">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.7278757900542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.7278757900542"
+                    Point2="0,33.7278757900542"
+                    Point3="-4,33.7278757900542" />
+                  <mssgle:LineSegment
+                    End="-45.7333333333333,33.7278757900542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-45.7333333333333,33.7278757900542"
+                    Point2="-49.7333333333333,33.7278757900542"
+                    Point3="-49.7333333333333,37.7278757900542" />
+                  <mssgle:LineSegment
+                    End="-49.7333333333333,49.0066674463484" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-50.1711197916667,38.7278757900542,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="376.39999721845,199.293334557957">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98.9333172268343,0"
+              Start="0,0"
+              End="91.4333172268343,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="91.4333172268343,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="30.4753109571672,5,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="272.933330551783,275.946668859694">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="285.999983893501,-55.2000011571249"
+              Start="0,0"
+              End="285.999983893501,-47.7000011571249">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.2520524145085" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.2520524145085"
+                    Point2="0,-22.2520524145085"
+                    Point3="4,-22.2520524145085" />
+                  <mssgle:LineSegment
+                    End="281.999983893501,-22.2520524145085" />
+                  <mssgle:CubicBezierSegment
+                    Point1="281.999983893501,-22.2520524145085"
+                    Point2="285.999983893501,-22.2520524145085"
+                    Point3="285.999983893501,-26.2520524145085" />
+                  <mssgle:LineSegment
+                    End="285.999983893501,-47.7000011571249" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="127.758644290501,-17.2520524145085,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

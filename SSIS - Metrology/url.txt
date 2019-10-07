@@ -1,0 +1,9 @@
+http://teams.network.int/local/GSOSK/metrology/_vti_bin/listdata.svc
+
+https://danfoss.sharepoint.com/sites/MetrologyPB/_vti_bin/listdata.svc
+https://danfoss.sharepoint.com/sites/MetrologyPBTest/_vti_bin/listdata.svc
+
+https://danfoss.sharepoint.com/sites/sfp/mfgit/_vti_bin/listdata.svc
+
+https://danfoss.sharepoint.com/sites/SharePointTest-Robert/_vti_bin/listdata.svc
+

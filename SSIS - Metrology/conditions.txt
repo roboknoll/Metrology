@@ -1,0 +1,9 @@
+Cheat Sheet:
+https://help.nintex.com/en-us/insight/OData/HE_CON_ODATAQueryCheatSheet.htm
+
+Conditions:
+$filter = UkoncenieId eq 2 &amp;$orderby = Id
+$filter = Id eq " +  @[User::RequestID]
+$filter = Id eq 0
+$filter=startswith(Value, 'A')
+https://help.nintex.com/en-us/insight/OData/HE_CON_ODATAQueryCheatSheet.htm

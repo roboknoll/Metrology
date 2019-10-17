@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="2/21/2019 1:09:24 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1051"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="185"
-  DTS:VersionGUID="{0A657E97-16DC-4D3C-8B6F-DEB722EA6C78}">
+  DTS:VersionBuild="186"
+  DTS:VersionGUID="{21E81D9C-2F22-4D03-9CB2-8723021FB07D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -221,25 +221,122 @@
                   name="Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Id]"
-                      dataType="i4"
-                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[Id]"
-                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Id]"
-                      name="Id" />
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[ContentTypeID]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[ContentTypeID]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[ContentTypeID]"
+                      name="ContentTypeID"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[DôvodMerania]"
-                      dataType="wstr"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[DôvodMerania]"
-                      length="100"
                       lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[DôvodMerania]"
-                      name="DôvodMerania" />
+                      name="DôvodMerania"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[KódMerania]"
-                      dataType="wstr"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[KódMerania]"
-                      length="50"
                       lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[KódMerania]"
-                      name="KódMerania" />
+                      name="KódMerania"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[Id]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[ContentType]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[ContentType]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[ContentType]"
+                      name="ContentType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Modified]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[Modified]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Modified]"
+                      name="Modified"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[Created]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[CreatedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[CreatedById]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[CreatedById]"
+                      name="CreatedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[ModifiedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[ModifiedById]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[ModifiedById]"
+                      name="ModifiedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Owshiddenversion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[Owshiddenversion]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Owshiddenversion]"
+                      name="Owshiddenversion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Version]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[Version]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Version]"
+                      name="Version"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Path]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[Path]"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Path]"
+                      name="Path"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -255,6 +352,10 @@
                       refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[KódMerania]"
                       dataType="nText"
                       name="KódMerania" />
+                    <externalMetadataColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      dataType="nText"
+                      name="ComplianceAssetId" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].ExternalColumns[Id]"
                       dataType="i4"
@@ -325,6 +426,11 @@
                       dataType="nText"
                       lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Error output].Columns[KódMerania]"
                       name="KódMerania" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\KPI.Outputs[Error output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Error output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\KPI.Outputs[Error output].Columns[Id]"
                       dataType="i4"
@@ -425,25 +531,122 @@
                   name="Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[ContentTypeID]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[ContentTypeID]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[ContentTypeID]"
+                      name="ContentTypeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[NS]"
-                      dataType="wstr"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[NS]"
-                      length="50"
                       lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[NS]"
-                      name="NS" />
+                      name="NS"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[PG]"
-                      dataType="wstr"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[PG]"
-                      length="50"
                       lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[PG]"
-                      name="PG" />
+                      name="PG"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Id]"
                       dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[Id]"
                       lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Id]"
-                      name="Id" />
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[ContentType]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[ContentType]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[ContentType]"
+                      name="ContentType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Modified]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[Modified]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Modified]"
+                      name="Modified"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[Created]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[CreatedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[CreatedById]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[CreatedById]"
+                      name="CreatedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[ModifiedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[ModifiedById]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[ModifiedById]"
+                      name="ModifiedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Owshiddenversion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[Owshiddenversion]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Owshiddenversion]"
+                      name="Owshiddenversion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Version]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[Version]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Version]"
+                      name="Version"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Path]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[Path]"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[Path]"
+                      name="Path"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -459,6 +662,10 @@
                       refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[PG]"
                       dataType="nText"
                       name="PG" />
+                    <externalMetadataColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      dataType="nText"
+                      name="ComplianceAssetId" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\NS.Outputs[Output].ExternalColumns[Id]"
                       dataType="i4"
@@ -529,6 +736,11 @@
                       dataType="nText"
                       lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Error output].Columns[PG]"
                       name="PG" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\NS.Outputs[Error output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Error output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\NS.Outputs[Error output].Columns[Id]"
                       dataType="i4"
@@ -629,6 +841,249 @@
                   name="Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ContentTypeID]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ContentTypeID]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ContentTypeID]"
+                      name="ContentTypeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NazovSuciastky]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[NazovSuciastky]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NazovSuciastky]"
+                      name="NazovSuciastky"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Žiadateľ]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Žiadateľ]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Žiadateľ]"
+                      name="Žiadateľ"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[IDDielu]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[IDDielu]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[IDDielu]"
+                      name="IDDielu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PočetKusov]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PočetKusov]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PočetKusov]"
+                      name="PočetKusov"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Operácia]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Operácia]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Operácia]"
+                      name="Operácia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PrioritaMerania]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PrioritaMerania]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PrioritaMerania]"
+                      name="PrioritaMerania"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoužitéMeracieZariadenieValue]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PoužitéMeracieZariadenieValue]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoužitéMeracieZariadenieValue]"
+                      name="PoužitéMeracieZariadenieValue"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ČasMerania]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ČasMerania]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ČasMerania]"
+                      name="ČasMerania"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NSId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[NSId]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NSId]"
+                      name="NSId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoznámkaŽiadateľ]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PoznámkaŽiadateľ]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoznámkaŽiadateľ]"
+                      name="PoznámkaŽiadateľ"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[C_3DZeissValue]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[C_3DZeissValue]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[C_3DZeissValue]"
+                      name="C_3DZeissValue"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Programovanie]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Programovanie]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Programovanie]"
+                      name="Programovanie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DľžkomerULM600]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[DľžkomerULM600]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DľžkomerULM600]"
+                      name="DľžkomerULM600"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Flatmaster]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Flatmaster]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Flatmaster]"
+                      name="Flatmaster"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[HommelT8000]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[HommelT8000]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[HommelT8000]"
+                      name="HommelT8000"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[MarsurfCD120]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[MarsurfCD120]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[MarsurfCD120]"
+                      name="MarsurfCD120"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[MikroskopUMM]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[MikroskopUMM]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[MikroskopUMM]"
+                      name="MikroskopUMM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Surfcom1500]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Surfcom1500]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Surfcom1500]"
+                      name="Surfcom1500"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Talyrond200]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Talyrond200]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Talyrond200]"
+                      name="Talyrond200"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[OsobnéČísloId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[OsobnéČísloId]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[OsobnéČísloId]"
+                      name="OsobnéČísloId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[KusyPredloženéDoValue]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[KusyPredloženéDoValue]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[KusyPredloženéDoValue]"
+                      name="KusyPredloženéDoValue"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Eported]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Eported]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Eported]"
+                      name="Eported"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoznámkaValue]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PoznámkaValue]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoznámkaValue]"
+                      name="PoznámkaValue"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DobaMerania]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[DobaMerania]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DobaMerania]"
+                      name="DobaMerania"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Closed]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Closed]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Closed]"
+                      name="Closed"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DôvodyMeraniaId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[DôvodyMeraniaId]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DôvodyMeraniaId]"
+                      name="DôvodyMeraniaId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[UkoncenieId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -638,6 +1093,24 @@
                       name="UkoncenieId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Created]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Id]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -645,6 +1118,69 @@
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Id]"
                       lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Id]"
                       name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ContentType]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ContentType]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ContentType]"
+                      name="ContentType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Modified]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Modified]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Modified]"
+                      name="Modified"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[CreatedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[CreatedById]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[CreatedById]"
+                      name="CreatedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ModifiedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ModifiedById]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ModifiedById]"
+                      name="ModifiedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Owshiddenversion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Owshiddenversion]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Owshiddenversion]"
+                      name="Owshiddenversion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Version]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Version]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Version]"
+                      name="Version"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Path]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Path]"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Path]"
+                      name="Path"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -694,9 +1230,9 @@
                       dataType="nText"
                       name="PoznámkaŽiadateľ" />
                     <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[c_3DZeissValue]"
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[C_3DZeissValue]"
                       dataType="nText"
-                      name="c_3DZeissValue" />
+                      name="C_3DZeissValue" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Programovanie]"
                       dataType="r8"
@@ -758,25 +1294,17 @@
                       dataType="i4"
                       name="DôvodyMeraniaId" />
                     <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[CreatedById]"
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[UkoncenieId]"
                       dataType="i4"
-                      name="CreatedById" />
+                      name="UkoncenieId" />
                     <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ModifiedById]"
-                      dataType="i4"
-                      name="ModifiedById" />
-                    <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Modified]"
-                      dataType="dbTimeStamp"
-                      name="Modified" />
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      dataType="nText"
+                      name="ComplianceAssetId" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Created]"
                       dataType="dbTimeStamp"
                       name="Created" />
-                    <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[UkoncenieId]"
-                      dataType="i4"
-                      name="UkoncenieId" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Id]"
                       dataType="i4"
@@ -785,6 +1313,18 @@
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ContentType]"
                       dataType="nText"
                       name="ContentType" />
+                    <externalMetadataColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Modified]"
+                      dataType="dbTimeStamp"
+                      name="Modified" />
+                    <externalMetadataColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[CreatedById]"
+                      dataType="i4"
+                      name="CreatedById" />
+                    <externalMetadataColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ModifiedById]"
+                      dataType="i4"
+                      name="ModifiedById" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Owshiddenversion]"
                       dataType="i4"
@@ -872,10 +1412,10 @@
                       lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[PoznámkaŽiadateľ]"
                       name="PoznámkaŽiadateľ" />
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[c_3DZeissValue]"
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[C_3DZeissValue]"
                       dataType="nText"
-                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[c_3DZeissValue]"
-                      name="c_3DZeissValue" />
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[C_3DZeissValue]"
+                      name="C_3DZeissValue" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Programovanie]"
                       dataType="r8"
@@ -952,30 +1492,20 @@
                       lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[DôvodyMeraniaId]"
                       name="DôvodyMeraniaId" />
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[CreatedById]"
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[UkoncenieId]"
                       dataType="i4"
-                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[CreatedById]"
-                      name="CreatedById" />
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[UkoncenieId]"
+                      name="UkoncenieId" />
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ModifiedById]"
-                      dataType="i4"
-                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ModifiedById]"
-                      name="ModifiedById" />
-                    <outputColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Modified]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Modified]"
-                      name="Modified" />
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Created]"
                       dataType="dbTimeStamp"
                       lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Created]"
                       name="Created" />
-                    <outputColumn
-                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[UkoncenieId]"
-                      dataType="i4"
-                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[UkoncenieId]"
-                      name="UkoncenieId" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Id]"
                       dataType="i4"
@@ -986,6 +1516,21 @@
                       dataType="nText"
                       lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ContentType]"
                       name="ContentType" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Modified]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Modified]"
+                      name="Modified" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[CreatedById]"
+                      dataType="i4"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[CreatedById]"
+                      name="CreatedById" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ModifiedById]"
+                      dataType="i4"
+                      lineageId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ModifiedById]"
+                      name="ModifiedById" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Owshiddenversion]"
                       dataType="i4"
@@ -1056,25 +1601,122 @@
                   name="Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Id]"
-                      dataType="i4"
-                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Id]"
-                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Id]"
-                      name="Id" />
-                    <outputColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[OsobnéČíslo]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[OsobnéČíslo]"
-                      length="50"
-                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[OsobnéČíslo]"
-                      name="OsobnéČíslo" />
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[ContentTypeID]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ContentTypeID]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[ContentTypeID]"
+                      name="ContentTypeID"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Meno]"
-                      dataType="wstr"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Meno]"
-                      length="50"
                       lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Meno]"
-                      name="Meno" />
+                      name="Meno"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[OsobnéČíslo]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[OsobnéČíslo]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[OsobnéČíslo]"
+                      name="OsobnéČíslo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Id]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[ContentType]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ContentType]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[ContentType]"
+                      name="ContentType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Modified]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Modified]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Modified]"
+                      name="Modified"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Created]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[CreatedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[CreatedById]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[CreatedById]"
+                      name="CreatedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[ModifiedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ModifiedById]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[ModifiedById]"
+                      name="ModifiedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Owshiddenversion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Owshiddenversion]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Owshiddenversion]"
+                      name="Owshiddenversion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Version]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Version]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Version]"
+                      name="Version"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Path]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Path]"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Path]"
+                      name="Path"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1091,13 +1733,17 @@
                       dataType="nText"
                       name="OsobnéČíslo" />
                     <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[CreatedById]"
-                      dataType="i4"
-                      name="CreatedById" />
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      dataType="nText"
+                      name="ComplianceAssetId" />
                     <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ModifiedById]"
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Id]"
                       dataType="i4"
-                      name="ModifiedById" />
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ContentType]"
+                      dataType="nText"
+                      name="ContentType" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Modified]"
                       dataType="dbTimeStamp"
@@ -1107,13 +1753,13 @@
                       dataType="dbTimeStamp"
                       name="Created" />
                     <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Id]"
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[CreatedById]"
                       dataType="i4"
-                      name="Id" />
+                      name="CreatedById" />
                     <externalMetadataColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ContentType]"
-                      dataType="nText"
-                      name="ContentType" />
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[ModifiedById]"
+                      dataType="i4"
+                      name="ModifiedById" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].ExternalColumns[Owshiddenversion]"
                       dataType="i4"
@@ -1161,15 +1807,20 @@
                       lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[OsobnéČíslo]"
                       name="OsobnéČíslo" />
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[CreatedById]"
-                      dataType="i4"
-                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[CreatedById]"
-                      name="CreatedById" />
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId" />
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ModifiedById]"
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[Id]"
                       dataType="i4"
-                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ModifiedById]"
-                      name="ModifiedById" />
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ContentType]"
+                      dataType="nText"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ContentType]"
+                      name="ContentType" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[Modified]"
                       dataType="dbTimeStamp"
@@ -1181,15 +1832,15 @@
                       lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[Created]"
                       name="Created" />
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[Id]"
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[CreatedById]"
                       dataType="i4"
-                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[Id]"
-                      name="Id" />
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[CreatedById]"
+                      name="CreatedById" />
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ContentType]"
-                      dataType="nText"
-                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ContentType]"
-                      name="ContentType" />
+                      refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ModifiedById]"
+                      dataType="i4"
+                      lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[ModifiedById]"
+                      name="ModifiedById" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Error output].Columns[Owshiddenversion]"
                       dataType="i4"
@@ -1260,18 +1911,122 @@
                   name="Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Kod]"
-                      dataType="r8"
-                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Kod]"
-                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Kod]"
-                      name="Kod" />
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[ContentTypeID]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[ContentTypeID]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[ContentTypeID]"
+                      name="ContentTypeID"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Stav]"
-                      dataType="wstr"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Stav]"
-                      length="50"
                       lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Stav]"
-                      name="Stav" />
+                      name="Stav"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Kod]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Kod]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Kod]"
+                      name="Kod"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Id]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[ContentType]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[ContentType]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[ContentType]"
+                      name="ContentType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Modified]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Modified]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Modified]"
+                      name="Modified"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Created]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[CreatedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[CreatedById]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[CreatedById]"
+                      name="CreatedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[ModifiedById]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[ModifiedById]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[ModifiedById]"
+                      name="ModifiedById"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Owshiddenversion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Owshiddenversion]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Owshiddenversion]"
+                      name="Owshiddenversion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Version]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Version]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Version]"
+                      name="Version"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Path]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Path]"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Path]"
+                      name="Path"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1287,6 +2042,10 @@
                       refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Kod]"
                       dataType="r8"
                       name="Kod" />
+                    <externalMetadataColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      dataType="nText"
+                      name="ComplianceAssetId" />
                     <externalMetadataColumn
                       refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].ExternalColumns[Id]"
                       dataType="i4"
@@ -1357,6 +2116,11 @@
                       dataType="r8"
                       lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Error output].Columns[Kod]"
                       name="Kod" />
+                    <outputColumn
+                      refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Error output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Error output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId" />
                     <outputColumn
                       refId="Package\Import LookUp Tables And Data\Statuses.Outputs[Error output].Columns[Id]"
                       dataType="i4"
@@ -1432,7 +2196,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1487,15 +2251,13 @@
                       lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[Id]" />
                     <inputColumn
                       refId="Package\Import LookUp Tables And Data\tbl_KPI.Inputs[OLE DB Destination Input].Columns[DôvodMerania]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedDataType="nText"
                       cachedName="DôvodMerania"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\tbl_KPI.Inputs[OLE DB Destination Input].ExternalColumns[Reason]"
                       lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[DôvodMerania]" />
                     <inputColumn
                       refId="Package\Import LookUp Tables And Data\tbl_KPI.Inputs[OLE DB Destination Input].Columns[KódMerania]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedDataType="nText"
                       cachedName="KódMerania"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\tbl_KPI.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
                       lineageId="Package\Import LookUp Tables And Data\KPI.Outputs[Output].Columns[KódMerania]" />
@@ -1569,7 +2331,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1624,15 +2386,13 @@
                       lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Id]" />
                     <inputColumn
                       refId="Package\Import LookUp Tables And Data\tbl_Operators.Inputs[OLE DB Destination Input].Columns[OsobnéČíslo]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedDataType="nText"
                       cachedName="OsobnéČíslo"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\tbl_Operators.Inputs[OLE DB Destination Input].ExternalColumns[OperatorNo]"
                       lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[OsobnéČíslo]" />
                     <inputColumn
                       refId="Package\Import LookUp Tables And Data\tbl_Operators.Inputs[OLE DB Destination Input].Columns[Meno]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedDataType="nText"
                       cachedName="Meno"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\tbl_Operators.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       lineageId="Package\Import LookUp Tables And Data\Pracovníci.Outputs[Output].Columns[Meno]" />
@@ -1706,7 +2466,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1761,8 +2521,7 @@
                       lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Kod]" />
                     <inputColumn
                       refId="Package\Import LookUp Tables And Data\tbl_Statuses.Inputs[OLE DB Destination Input].Columns[Stav]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedDataType="nText"
                       cachedName="Stav"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\tbl_Statuses.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
                       lineageId="Package\Import LookUp Tables And Data\Statuses.Outputs[Output].Columns[Stav]" />
@@ -1831,7 +2590,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1880,15 +2639,13 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Import LookUp Tables And Data\tbl_TeamsAndCenters.Inputs[OLE DB Destination Input].Columns[NS]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedDataType="nText"
                       cachedName="NS"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\tbl_TeamsAndCenters.Inputs[OLE DB Destination Input].ExternalColumns[CostCenter]"
                       lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[NS]" />
                     <inputColumn
                       refId="Package\Import LookUp Tables And Data\tbl_TeamsAndCenters.Inputs[OLE DB Destination Input].Columns[PG]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedDataType="nText"
                       cachedName="PG"
                       externalMetadataColumnId="Package\Import LookUp Tables And Data\tbl_TeamsAndCenters.Inputs[OLE DB Destination Input].ExternalColumns[Team]"
                       lineageId="Package\Import LookUp Tables And Data\NS.Outputs[Output].Columns[PG]" />
@@ -1968,7 +2725,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2458,7 +3215,7 @@
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2611,13 +3368,13 @@
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[tbl_Devices]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[tbl_Devices]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[tbl_Devices]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[tbl_Devices]) [refTable]
 where [refTable].[DeviceNameSharePoint] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -2769,13 +3526,13 @@ where [refTable].[DeviceNameSharePoint] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[tbl_KPI]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[tbl_KPI]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[tbl_KPI]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[tbl_KPI]) [refTable]
 where [refTable].[ID] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -2942,13 +3699,13 @@ where [refTable].[ID] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[tbl_Operators]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[tbl_Operators]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[tbl_Operators]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[tbl_Operators]) [refTable]
 where [refTable].[ID] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -3100,13 +3857,13 @@ where [refTable].[ID] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[tbl_TeamsAndCenters]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[tbl_TeamsAndCenters]</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[tbl_TeamsAndCenters]) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[tbl_TeamsAndCenters]) [refTable]
 where [refTable].[Id] = ?</property>
                     <property
                       dataType="System.Int32"
@@ -3309,22 +4066,38 @@ where [refTable].[Id] = ?</property>
                       name="Output">
                       <outputColumns>
                         <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ContentTypeID]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ContentTypeID]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ContentTypeID]"
+                          name="ContentTypeID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NazovSuciastky]"
-                          dataType="wstr"
+                          dataType="nText"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[NazovSuciastky]"
-                          length="50"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NazovSuciastky]"
                           name="NazovSuciastky"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Žiadateľ]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Žiadateľ]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Žiadateľ]"
+                          name="Žiadateľ"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[IDDielu]"
-                          dataType="wstr"
+                          dataType="nText"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[IDDielu]"
-                          length="50"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[IDDielu]"
                           name="IDDielu"
                           truncationRowDisposition="FailComponent" />
@@ -3339,13 +4112,39 @@ where [refTable].[Id] = ?</property>
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Operácia]"
-                          dataType="wstr"
+                          dataType="nText"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Operácia]"
-                          length="50"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Operácia]"
                           name="Operácia"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PrioritaMerania]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PrioritaMerania]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PrioritaMerania]"
+                          name="PrioritaMerania"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoužitéMeracieZariadenieValue]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PoužitéMeracieZariadenieValue]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoužitéMeracieZariadenieValue]"
+                          name="PoužitéMeracieZariadenieValue"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ČasMerania]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ČasMerania]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ČasMerania]"
+                          name="ČasMerania"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NSId]"
@@ -3357,14 +4156,22 @@ where [refTable].[Id] = ?</property>
                           name="NSId"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[c_3DZeissValue]"
-                          dataType="wstr"
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoznámkaŽiadateľ]"
+                          dataType="nText"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[c_3DZeissValue]"
-                          length="50"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[c_3DZeissValue]"
-                          name="c_3DZeissValue"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PoznámkaŽiadateľ]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoznámkaŽiadateľ]"
+                          name="PoznámkaŽiadateľ"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[C_3DZeissValue]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[C_3DZeissValue]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[C_3DZeissValue]"
+                          name="C_3DZeissValue"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Programovanie]"
@@ -3448,6 +4255,51 @@ where [refTable].[Id] = ?</property>
                           name="OsobnéČísloId"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[KusyPredloženéDoValue]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[KusyPredloženéDoValue]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[KusyPredloženéDoValue]"
+                          name="KusyPredloženéDoValue"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Eported]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Eported]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Eported]"
+                          name="Eported"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoznámkaValue]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[PoznámkaValue]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PoznámkaValue]"
+                          name="PoznámkaValue"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DobaMerania]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[DobaMerania]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DobaMerania]"
+                          name="DobaMerania"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Closed]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Closed]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Closed]"
+                          name="Closed"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DôvodyMeraniaId]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversion"
@@ -3457,13 +4309,22 @@ where [refTable].[Id] = ?</property>
                           name="DôvodyMeraniaId"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Modified]"
-                          dataType="dbTimeStamp"
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[UkoncenieId]"
+                          dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Modified]"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Modified]"
-                          name="Modified"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[UkoncenieId]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[UkoncenieId]"
+                          name="UkoncenieId"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ComplianceAssetId]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ComplianceAssetId]"
+                          name="ComplianceAssetId"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Created]"
@@ -3482,6 +4343,69 @@ where [refTable].[Id] = ?</property>
                           externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Id]"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Id]"
                           name="Id"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ContentType]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ContentType]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ContentType]"
+                          name="ContentType"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Modified]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Modified]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Modified]"
+                          name="Modified"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[CreatedById]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[CreatedById]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[CreatedById]"
+                          name="CreatedById"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ModifiedById]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ModifiedById]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[ModifiedById]"
+                          name="ModifiedById"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Owshiddenversion]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Owshiddenversion]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Owshiddenversion]"
+                          name="Owshiddenversion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Version]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Version]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Version]"
+                          name="Version"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Path]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Path]"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Path]"
+                          name="Path"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
@@ -3531,9 +4455,9 @@ where [refTable].[Id] = ?</property>
                           dataType="nText"
                           name="PoznámkaŽiadateľ" />
                         <externalMetadataColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[c_3DZeissValue]"
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[C_3DZeissValue]"
                           dataType="nText"
-                          name="c_3DZeissValue" />
+                          name="C_3DZeissValue" />
                         <externalMetadataColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Programovanie]"
                           dataType="r8"
@@ -3595,25 +4519,17 @@ where [refTable].[Id] = ?</property>
                           dataType="i4"
                           name="DôvodyMeraniaId" />
                         <externalMetadataColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[CreatedById]"
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[UkoncenieId]"
                           dataType="i4"
-                          name="CreatedById" />
+                          name="UkoncenieId" />
                         <externalMetadataColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ModifiedById]"
-                          dataType="i4"
-                          name="ModifiedById" />
-                        <externalMetadataColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Modified]"
-                          dataType="dbTimeStamp"
-                          name="Modified" />
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                          dataType="nText"
+                          name="ComplianceAssetId" />
                         <externalMetadataColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Created]"
                           dataType="dbTimeStamp"
                           name="Created" />
-                        <externalMetadataColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[UkoncenieId]"
-                          dataType="i4"
-                          name="UkoncenieId" />
                         <externalMetadataColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Id]"
                           dataType="i4"
@@ -3622,6 +4538,18 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ContentType]"
                           dataType="nText"
                           name="ContentType" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Modified]"
+                          dataType="dbTimeStamp"
+                          name="Modified" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[CreatedById]"
+                          dataType="i4"
+                          name="CreatedById" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[ModifiedById]"
+                          dataType="i4"
+                          name="ModifiedById" />
                         <externalMetadataColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].ExternalColumns[Owshiddenversion]"
                           dataType="i4"
@@ -3709,10 +4637,10 @@ where [refTable].[Id] = ?</property>
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[PoznámkaŽiadateľ]"
                           name="PoznámkaŽiadateľ" />
                         <outputColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[c_3DZeissValue]"
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[C_3DZeissValue]"
                           dataType="nText"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[c_3DZeissValue]"
-                          name="c_3DZeissValue" />
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[C_3DZeissValue]"
+                          name="C_3DZeissValue" />
                         <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Programovanie]"
                           dataType="r8"
@@ -3789,30 +4717,20 @@ where [refTable].[Id] = ?</property>
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[DôvodyMeraniaId]"
                           name="DôvodyMeraniaId" />
                         <outputColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[CreatedById]"
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[UkoncenieId]"
                           dataType="i4"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[CreatedById]"
-                          name="CreatedById" />
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[UkoncenieId]"
+                          name="UkoncenieId" />
                         <outputColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ModifiedById]"
-                          dataType="i4"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ModifiedById]"
-                          name="ModifiedById" />
-                        <outputColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Modified]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Modified]"
-                          name="Modified" />
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ComplianceAssetId]"
+                          dataType="nText"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ComplianceAssetId]"
+                          name="ComplianceAssetId" />
                         <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Created]"
                           dataType="dbTimeStamp"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Created]"
                           name="Created" />
-                        <outputColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[UkoncenieId]"
-                          dataType="i4"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[UkoncenieId]"
-                          name="UkoncenieId" />
                         <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Id]"
                           dataType="i4"
@@ -3823,6 +4741,21 @@ where [refTable].[Id] = ?</property>
                           dataType="nText"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ContentType]"
                           name="ContentType" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Modified]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Modified]"
+                          name="Modified" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[CreatedById]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[CreatedById]"
+                          name="CreatedById" />
+                        <outputColumn
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ModifiedById]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[ModifiedById]"
+                          name="ModifiedById" />
                         <outputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Error output].Columns[Owshiddenversion]"
                           dataType="i4"
@@ -3861,7 +4794,7 @@ where [refTable].[Id] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="c_3DZeissValue"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[c_3DZeissValue]" />
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\187:invalid" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -3881,7 +4814,7 @@ where [refTable].[Id] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                          name="Expression">[LEN]([REPLACENULL](#{Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[c_3DZeissValue]},"")) &gt; 0</property>
+                          name="Expression">[LEN]([REPLACENULL](#{Package\Loop Over Each NewClosed RequestId\Import Data\187:invalid},"")) &gt; 0</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -3958,7 +4891,7 @@ where [refTable].[Id] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4448,8 +5381,7 @@ where [refTable].[Id] = ?</property>
                         </inputColumn>
                         <inputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Union All.Inputs[Union All Input 1].Columns[IDDielu]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedDataType="nText"
                           cachedName="IDDielu"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[IDDielu]">
                           <properties>
@@ -4462,8 +5394,7 @@ where [refTable].[Id] = ?</property>
                         </inputColumn>
                         <inputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Union All.Inputs[Union All Input 1].Columns[Operácia]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedDataType="nText"
                           cachedName="Operácia"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Operácia]">
                           <properties>
@@ -4476,8 +5407,7 @@ where [refTable].[Id] = ?</property>
                         </inputColumn>
                         <inputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Union All.Inputs[Union All Input 1].Columns[NazovSuciastky]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedDataType="nText"
                           cachedName="NazovSuciastky"
                           lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NazovSuciastky]">
                           <properties>
@@ -4489,11 +5419,10 @@ where [refTable].[Id] = ?</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
-                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\Union All.Inputs[Union All Input 1].Columns[c_3DZeissValue]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="c_3DZeissValue"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[c_3DZeissValue]">
+                          refId="Package\Loop Over Each NewClosed RequestId\Import Data\Union All.Inputs[Union All Input 1].Columns[C_3DZeissValue]"
+                          cachedDataType="nText"
+                          cachedName="C_3DZeissValue"
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[C_3DZeissValue]">
                           <properties>
                             <property
                               containsID="true"
@@ -4780,7 +5709,7 @@ where [refTable].[Id] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4944,7 +5873,7 @@ where [refTable].[Id] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5108,7 +6037,7 @@ where [refTable].[Id] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5272,7 +6201,7 @@ where [refTable].[Id] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5407,7 +6336,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[DľžkomerULM600]"
                           cachedDataType="r8"
                           cachedName="DľžkomerULM600"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DľžkomerULM600]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\189:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5426,7 +6355,7 @@ where [refTable].[Id] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="NazovSuciastky"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NazovSuciastky]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\182:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5445,7 +6374,7 @@ where [refTable].[Id] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="IDDielu"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[IDDielu]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\183:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5463,7 +6392,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[PočetKusov]"
                           cachedDataType="r8"
                           cachedName="PočetKusov"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PočetKusov]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\184:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5482,7 +6411,7 @@ where [refTable].[Id] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="Operácia"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Operácia]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\185:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5500,7 +6429,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[NSId]"
                           cachedDataType="i4"
                           cachedName="NSId"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NSId]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\186:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5518,7 +6447,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Programovanie]"
                           cachedDataType="r8"
                           cachedName="Programovanie"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Programovanie]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\188:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5536,7 +6465,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Flatmaster]"
                           cachedDataType="r8"
                           cachedName="Flatmaster"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Flatmaster]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\190:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5554,7 +6483,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[HommelT8000]"
                           cachedDataType="r8"
                           cachedName="HommelT8000"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[HommelT8000]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\191:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5572,7 +6501,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[MarsurfCD120]"
                           cachedDataType="r8"
                           cachedName="MarsurfCD120"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[MarsurfCD120]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\192:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5590,7 +6519,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[MikroskopUMM]"
                           cachedDataType="r8"
                           cachedName="MikroskopUMM"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[MikroskopUMM]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\193:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5608,7 +6537,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Surfcom1500]"
                           cachedDataType="r8"
                           cachedName="Surfcom1500"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Surfcom1500]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\194:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5626,7 +6555,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Talyrond200]"
                           cachedDataType="r8"
                           cachedName="Talyrond200"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Talyrond200]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\195:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5644,7 +6573,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[OsobnéČísloId]"
                           cachedDataType="i4"
                           cachedName="OsobnéČísloId"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[OsobnéČísloId]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\196:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5662,7 +6591,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[DôvodyMeraniaId]"
                           cachedDataType="i4"
                           cachedName="DôvodyMeraniaId"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DôvodyMeraniaId]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\197:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5680,7 +6609,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Modified]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Modified"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Modified]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\198:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5698,7 +6627,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Created]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Created"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Created]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\199:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5716,7 +6645,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Id]"
                           cachedDataType="i4"
                           cachedName="Id"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Id]">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\200:invalid">
                           <properties>
                             <property
                               containsID="true"
@@ -5936,24 +6865,24 @@ where [refTable].[Id] = ?</property>
                   startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Team.Outputs[Match Team]" />
                 <path
                   refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output3]"
-                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow KPI.Inputs[OLE DB Destination Input]"
+                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Device Name.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
-                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup KPI.Outputs[No Match KPI]" />
+                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Device.Outputs[No Match Device]" />
                 <path
                   refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output2]"
-                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Team.Inputs[OLE DB Destination Input]"
-                  name="Lookup No Match Output"
-                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Team.Outputs[No Match Team]" />
-                <path
-                  refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output1]"
                   endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Operators.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
                   startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Operators.Outputs[No Match Operators]" />
                 <path
-                  refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output]"
-                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Device Name.Inputs[OLE DB Destination Input]"
+                  refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output1]"
+                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Team.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
-                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Device.Outputs[No Match Device]" />
+                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Team.Outputs[No Match Team]" />
+                <path
+                  refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output]"
+                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow KPI.Inputs[OLE DB Destination Input]"
+                  name="Lookup No Match Output"
+                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup KPI.Outputs[No Match KPI]" />
                 <path
                   refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Multicast Output 1]"
                   endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input]"
@@ -6980,7 +7909,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output]"
+          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output3]"
           TopLeft="432.866685832871,849.992728511002">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7004,7 +7933,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output1]"
+          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output2]"
           TopLeft="432.866685832871,1030.69091063875">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7028,7 +7957,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output2]"
+          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output1]"
           TopLeft="432.866685832871,669.294546383252">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7052,7 +7981,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output3]"
+          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output]"
           TopLeft="432.866685832871,940.341819574878">
           <EdgeLayout.Curve>
             <mssgle:Curve

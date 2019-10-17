@@ -25,7 +25,7 @@
           <SSIS:Property SSIS:Name="CreatorName">DANFOSS\A119097</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorComputerName">PC0163980</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">Packages to import all data for Metrology department</SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnfpCIpeCHEyIOgcc64hjiAAAAAACAAAAAAADZgAAwAAAABAAAABHZ8IsW5DXdjofc2LoUpnRAAAAAASAAACgAAAAEAAAAIWya3qCtE31rIcPGpflzvaIAAAATvKeEk58DP1zetW31v0oDjKwKiyWjoKnVL1a6DI+HK/Jk4oPuy8147vBNzSQMOLQ5Sn5Ey09n3impTEJj51I4GajoDqQgW3Sqqz5LouMPyLl6Lx5ANVTnZXtW2Q0WR4L32L4Gm4GiSMX78T5KpFoajQa/GIh+aQgyfGzJqNgBF6Nf1xd+91E6RQAAABpUN36b6uRDdu/UVk51+FteSx8Kg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUJ8s2fNYv0K656PvtKkt4wAAAAACAAAAAAADZgAAwAAAABAAAAAXgq+ZMMAyIG/wRkFXYI3vAAAAAASAAACgAAAAEAAAAA7u9eqLZZ5LKKrx2TDmPiiIAAAAQ2SW8tp9uGA8ja9412j8hi7OnXBPTthpOw/U/twDZxJEGkVIzdMlbFhzocy4wrNBz9Tb2F5g8CblMngVoY42WJ0ytuUbqmboJLUttcId1O/nSBJfkSFu4x+PrZyIMt7TxZ1qtvHMep2MBvqa418Ul57I8V6FjxV5vX+5if/2OGhen/QIT/jHHBQAAACUBA60FwNuzXsm6pd+I6bjJ7utGg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -33,6 +33,7 @@
           <SSIS:Package SSIS:Name="SSIS - Zeiss Calypso 2018 File Import.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SSIS - Metrology download.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SSIS - Metrology All download.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="SSIS - Test1.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SKPBA01SQL.conmgr" />
@@ -67,7 +68,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=SKPBA01SQL\SQLHotel;Initial Catalog=Metrology;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=(local)\SQLEXPRESS;Initial Catalog=Test;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -97,7 +98,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Metrology</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Test</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -141,7 +142,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">SKPBA01SQL\SQLHotel</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">(local)\SQLEXPRESS</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -215,7 +216,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">140</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -245,7 +246,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">4</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -260,7 +261,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Service Document Url=http://teams.network.int/local/GSOSK/metrology/_vti_bin/listdata.svc/;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=SSPI;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Service Document Url=https://danfoss.sharepoint.com/sites/Metrology/_vti_bin/listdata.svc;Include Atom Elements=Auto;Include Expanded Entities=False;Integrated Security=False;Cookie="SPOIDCRL=77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48U1A+VjYsMGguZnxtZW1iZXJzaGlwfDEwMDM3ZmZlOGM0ZGIxZmRAbGl2ZS5jb20sMCMuZnxtZW1iZXJzaGlwfHJrbm9sbEBkYW5mb3NzLmNvbSwxMzIxNTgxNDg2NzAwMDAwMDAsMTMyMTQzODE1NTIwMDAwMDAwLDEzMjE2MjQ2ODY5NTEyNTY4NCwwLjAuMC4wLDUsMDk3NDY0YjgtMDY5Yy00NTNlLTkyNTQtYzE3ZWM3MDczMTBkLCwsOWRkNjBlOWYtYzAxNi0xMDAwLWNjNDktMzY1N2Y0NjFmOGUzLDlkZDYwZTlmLWMwMTYtMTAwMC1jYzQ5LTM2NTdmNDYxZjhlMywsMCwwLDAsLCwsRWJObkpGem1aU3N3MlppcHRhVUhBL0FQM0RENUorSzlXcU1yVklhQVBRWXI4VmtaYnVQaFNneUI5Q09SMHdVc0RzQ2VXdWxEa0wrYXIyK0ZYL3RMazViTGtrcmVZaTM2M09UUDZPaUNDZVVibXRhL1dJOXpmVUdZWkNCbmVnbWNmTHhUbEZHeEZXZ2NBTGpMQ1l6aXNnK05JTHh3djhmSEkxbzJBS1VTQnArcitLUEFmaTlDVjlRQnc0K1VZOXZjYi9jQ3R0TDNuVjNXRDNDc0pCN1I4SFFKRjRNRWM1TGErZ3NvbUhZS3pncWRMKzJ2Qy9aV1FuWUU4bzhLNXJRMlIvemZjazJjWGJPbzJRT2NiM2NMd0w0bCtRSEFxVmdTc2ZQV0x0ZmcwWnlYV3BJU0kwdkxrUmg1WnlpblcyOU5TaTlXcGkxdk5YTThQMkI1ZnltdkJ3PT08L1NQPg==";User ID=rknoll@danfoss.com;Persist Security Info=False;Time Out=600;Schema Sample Size=25;Retry Count=5;Retry Sleep=100;Keep Alive=False;Max Received Message Size=4398046511104</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -289,7 +290,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">140</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -304,7 +305,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">http://teams.network.int/local/GSOSK/metrology/_vti_bin/listdata.svc/</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">https://danfoss.sharepoint.com/sites/Metrology/_vti_bin/listdata.svc</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -319,8 +320,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">
-                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">rknoll@danfoss.com</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -632,10 +632,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">185</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">186</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{0A657E97-16DC-4D3C-8B6F-DEB722EA6C78}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{21E81D9C-2F22-4D03-9CB2-8723021FB07D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -690,6 +690,23 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="SSIS - Test1.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{2FB748CB-A2A7-4166-8FDB-476F7297A460}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">SSIS - Test1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{72EC9E3F-5BAC-481C-A419-F95338D73891}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
       </SSIS:Project>
@@ -726,7 +743,13 @@
         <LinkedAzureSSISIR />
         <LinkedAzureStorage />
         <RemoteExecutionFolder />
-        <ParameterConfigurationValues />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2019-10-17T19:41:02.7767869Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
       </Options>
     </Configuration>
   </Configurations>

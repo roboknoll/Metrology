@@ -11,11 +11,30 @@
   DTS:LocaleID="1051"
   DTS:ObjectName="SSIS - Test1"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{545266B4-5292-467D-A195-01BB4BF7CC6F}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{D5A8B4A3-33D2-45A7-B6E8-265EB5D40F44}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{41102C2C-887B-4C17-93C3-B7F78DED019E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NewClosed">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
@@ -328,13 +347,13 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Meno"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[Meno]" />
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[Meno]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion 3.Inputs[Data Conversion Input].Columns[OsobnéČíslo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="OsobnéČíslo"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[OsobnéČíslo]" />
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[OsobnéČíslo]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -360,7 +379,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[Meno]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[Meno]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -381,7 +400,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OData Source.Outputs[Output].Columns[OsobnéČíslo]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[OsobnéČíslo]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -408,6 +427,82 @@
                       refId="Package\Data Flow Task\Data Conversion 3.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Data Conversion 3.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Data Conversion 4"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion 4"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion 4.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion 4.Inputs[Data Conversion Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion 4.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Output].Columns[_Id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Output].Columns[_Id]"
+                      name="_Id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[Id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion 4.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -937,18 +1032,18 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OData Source"
+              refId="Package\Data Flow Task\OData Source 1"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="OData Source Component;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Read data from OData services"
-              name="OData Source"
+              name="OData Source 1"
               usesDispositions="true">
               <properties>
                 <property
                   dataType="System.String"
                   description="Name of the collection to be retrieved from the service."
                   expressionType="Notify"
-                  name="CollectionName">Pracovníci</property>
+                  name="CollectionName">PoziadavkyNaMeranie</property>
                 <property
                   dataType="System.Int32"
                   description="The default maximum length for a string that has no maxlength specified in the schema."
@@ -957,7 +1052,7 @@
                   dataType="System.String"
                   description="Query in the url. "
                   expressionType="Notify"
-                  name="Query"></property>
+                  name="Query">$filter = UkoncenieId eq 2 &amp;$orderby = Id</property>
                 <property
                   dataType="System.String"
                   description="Resource path of the collection to be retrieved from the service."
@@ -974,7 +1069,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OData Source.Connections[Connection]"
+                  refId="Package\Data Flow Task\OData Source 1.Connections[Connection]"
                   connectionManagerID="{6593BD2A-3A2D-420D-A961-17C6913C7AC5}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Metrology]"
                   description="Connection to OData Service"
@@ -982,167 +1077,384 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OData Source.Outputs[Output]"
+                  refId="Package\Data Flow Task\OData Source 1.Outputs[Output]"
                   name="Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[Meno]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Meno]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[Meno]"
-                      name="Meno" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[OsobnéČíslo]"
-                      dataType="wstr"
-                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[OsobnéČíslo]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[OsobnéČíslo]"
-                      name="OsobnéČíslo" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[Id]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[Id]"
                       dataType="i4"
-                      externalMetadataColumnId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Id]"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[Id]"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Id]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[Id]"
                       name="Id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[UkoncenieId]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[UkoncenieId]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[UkoncenieId]"
+                      name="UkoncenieId" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[ContentTypeID]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[ContentTypeID]"
                       dataType="nText"
                       name="ContentTypeID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Meno]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[NazovSuciastky]"
                       dataType="nText"
-                      name="Meno" />
+                      name="NazovSuciastky" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[OsobnéČíslo]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Žiadateľ]"
                       dataType="nText"
-                      name="OsobnéČíslo" />
+                      name="Žiadateľ" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[IDDielu]"
+                      dataType="nText"
+                      name="IDDielu" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[PočetKusov]"
+                      dataType="r8"
+                      name="PočetKusov" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Operácia]"
+                      dataType="nText"
+                      name="Operácia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[PrioritaMerania]"
+                      dataType="bool"
+                      name="PrioritaMerania" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[PoužitéMeracieZariadenieValue]"
+                      dataType="nText"
+                      name="PoužitéMeracieZariadenieValue" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[ČasMerania]"
+                      dataType="nText"
+                      name="ČasMerania" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[NSId]"
+                      dataType="i4"
+                      name="NSId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[PoznámkaŽiadateľ]"
+                      dataType="nText"
+                      name="PoznámkaŽiadateľ" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[C_3DZeissValue]"
+                      dataType="nText"
+                      name="C_3DZeissValue" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Programovanie]"
+                      dataType="r8"
+                      name="Programovanie" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[DľžkomerULM600]"
+                      dataType="r8"
+                      name="DľžkomerULM600" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Flatmaster]"
+                      dataType="r8"
+                      name="Flatmaster" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[HommelT8000]"
+                      dataType="r8"
+                      name="HommelT8000" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[MarsurfCD120]"
+                      dataType="r8"
+                      name="MarsurfCD120" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[MikroskopUMM]"
+                      dataType="r8"
+                      name="MikroskopUMM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Surfcom1500]"
+                      dataType="r8"
+                      name="Surfcom1500" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Talyrond200]"
+                      dataType="r8"
+                      name="Talyrond200" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[OsobnéČísloId]"
+                      dataType="i4"
+                      name="OsobnéČísloId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[KusyPredloženéDoValue]"
+                      dataType="nText"
+                      name="KusyPredloženéDoValue" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Eported]"
+                      dataType="bool"
+                      name="Eported" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[PoznámkaValue]"
+                      dataType="nText"
+                      name="PoznámkaValue" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[DobaMerania]"
+                      dataType="r8"
+                      name="DobaMerania" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Closed]"
+                      dataType="dbTimeStamp"
+                      name="Closed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[DôvodyMeraniaId]"
+                      dataType="i4"
+                      name="DôvodyMeraniaId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[UkoncenieId]"
+                      dataType="i4"
+                      name="UkoncenieId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[ComplianceAssetId]"
                       dataType="nText"
                       name="ComplianceAssetId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Id]"
-                      dataType="i4"
-                      name="Id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[ContentType]"
-                      dataType="nText"
-                      name="ContentType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Modified]"
-                      dataType="dbTimeStamp"
-                      name="Modified" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Created]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Created]"
                       dataType="dbTimeStamp"
                       name="Created" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[CreatedById]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[ContentType]"
+                      dataType="nText"
+                      name="ContentType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Modified]"
+                      dataType="dbTimeStamp"
+                      name="Modified" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[CreatedById]"
                       dataType="i4"
                       name="CreatedById" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[ModifiedById]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[ModifiedById]"
                       dataType="i4"
                       name="ModifiedById" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Owshiddenversion]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Owshiddenversion]"
                       dataType="i4"
                       name="Owshiddenversion" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Version]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Version]"
                       dataType="nText"
                       name="Version" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Output].ExternalColumns[Path]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Output].ExternalColumns[Path]"
                       dataType="nText"
                       name="Path" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\OData Source.Outputs[Error output]"
+                  refId="Package\Data Flow Task\OData Source 1.Outputs[Error output]"
                   isErrorOut="true"
                   name="Error output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ContentTypeID]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ContentTypeID]"
                       dataType="nText"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ContentTypeID]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ContentTypeID]"
                       name="ContentTypeID" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Meno]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[NazovSuciastky]"
                       dataType="nText"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Meno]"
-                      name="Meno" />
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[NazovSuciastky]"
+                      name="NazovSuciastky" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[OsobnéČíslo]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Žiadateľ]"
                       dataType="nText"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[OsobnéČíslo]"
-                      name="OsobnéČíslo" />
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Žiadateľ]"
+                      name="Žiadateľ" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ComplianceAssetId]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[IDDielu]"
                       dataType="nText"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ComplianceAssetId]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[IDDielu]"
+                      name="IDDielu" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PočetKusov]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PočetKusov]"
+                      name="PočetKusov" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Operácia]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Operácia]"
+                      name="Operácia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PrioritaMerania]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PrioritaMerania]"
+                      name="PrioritaMerania" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PoužitéMeracieZariadenieValue]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PoužitéMeracieZariadenieValue]"
+                      name="PoužitéMeracieZariadenieValue" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ČasMerania]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ČasMerania]"
+                      name="ČasMerania" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[NSId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[NSId]"
+                      name="NSId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PoznámkaŽiadateľ]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PoznámkaŽiadateľ]"
+                      name="PoznámkaŽiadateľ" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[C_3DZeissValue]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[C_3DZeissValue]"
+                      name="C_3DZeissValue" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Programovanie]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Programovanie]"
+                      name="Programovanie" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[DľžkomerULM600]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[DľžkomerULM600]"
+                      name="DľžkomerULM600" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Flatmaster]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Flatmaster]"
+                      name="Flatmaster" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[HommelT8000]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[HommelT8000]"
+                      name="HommelT8000" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[MarsurfCD120]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[MarsurfCD120]"
+                      name="MarsurfCD120" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[MikroskopUMM]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[MikroskopUMM]"
+                      name="MikroskopUMM" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Surfcom1500]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Surfcom1500]"
+                      name="Surfcom1500" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Talyrond200]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Talyrond200]"
+                      name="Talyrond200" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[OsobnéČísloId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[OsobnéČísloId]"
+                      name="OsobnéČísloId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[KusyPredloženéDoValue]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[KusyPredloženéDoValue]"
+                      name="KusyPredloženéDoValue" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Eported]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Eported]"
+                      name="Eported" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PoznámkaValue]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[PoznámkaValue]"
+                      name="PoznámkaValue" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[DobaMerania]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[DobaMerania]"
+                      name="DobaMerania" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Closed]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Closed]"
+                      name="Closed" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[DôvodyMeraniaId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[DôvodyMeraniaId]"
+                      name="DôvodyMeraniaId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[UkoncenieId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[UkoncenieId]"
+                      name="UkoncenieId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ComplianceAssetId]"
                       name="ComplianceAssetId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Id]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Id]"
-                      name="Id" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ContentType]"
-                      dataType="nText"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ContentType]"
-                      name="ContentType" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Modified]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Created]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Modified]"
-                      name="Modified" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Created]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Created]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Created]"
                       name="Created" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[CreatedById]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Id]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[CreatedById]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ContentType]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ContentType]"
+                      name="ContentType" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Modified]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Modified]"
+                      name="Modified" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[CreatedById]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[CreatedById]"
                       name="CreatedById" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ModifiedById]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ModifiedById]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[ModifiedById]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[ModifiedById]"
                       name="ModifiedById" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Owshiddenversion]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Owshiddenversion]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Owshiddenversion]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Owshiddenversion]"
                       name="Owshiddenversion" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Version]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Version]"
                       dataType="nText"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Version]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Version]"
                       name="Version" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Path]"
+                      refId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Path]"
                       dataType="nText"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Error output].Columns[Path]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Error output].Columns[Path]"
                       name="Path" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1625,7 +1937,7 @@
                       cachedDataType="i4"
                       cachedName="Id"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 3.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\Data Flow Task\OData Source.Outputs[Output].Columns[Id]" />
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[Id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination 3.Inputs[OLE DB Destination Input].Columns[_Meno]"
                       cachedDataType="wstr"
@@ -1680,6 +1992,344 @@
                       lineageId="Package\Data Flow Task\OLE DB Destination 3.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination 4"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 4"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[tbl_Tmp]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination 4.Connections[OleDbConnection]"
+                  connectionManagerID="{2D2AAE26-E24A-490D-B701-BAF1F2F5C359}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SKPBA01SQL]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input].Columns[_Id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="_Id"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Output].Columns[_Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input].Columns[UkoncenieId]"
+                      cachedDataType="i4"
+                      cachedName="UkoncenieId"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input].ExternalColumns[Closed]"
+                      lineageId="Package\Data Flow Task\OData Source 1.Outputs[Output].Columns[UkoncenieId]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="10"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input].ExternalColumns[Closed]"
+                      dataType="bool"
+                      name="Closed" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination 4.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 4.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination 4.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination 4.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination 4.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Pracovnici"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="OData Source Component;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Read data from OData services"
+              name="Pracovnici"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Name of the collection to be retrieved from the service."
+                  expressionType="Notify"
+                  name="CollectionName">Pracovníci</property>
+                <property
+                  dataType="System.Int32"
+                  description="The default maximum length for a string that has no maxlength specified in the schema."
+                  name="DefaultStringLength">4000</property>
+                <property
+                  dataType="System.String"
+                  description="Query in the url. "
+                  expressionType="Notify"
+                  name="Query"></property>
+                <property
+                  dataType="System.String"
+                  description="Resource path of the collection to be retrieved from the service."
+                  expressionType="Notify"
+                  name="ResourcePath"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="When set to true, use the resource path as requested collection; otherwise, use the collection name."
+                  expressionType="Notify"
+                  name="UseResourcePath">false</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.OData</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Pracovnici.Connections[Connection]"
+                  connectionManagerID="{6593BD2A-3A2D-420D-A961-17C6913C7AC5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Metrology]"
+                  description="Connection to OData Service"
+                  name="Connection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Pracovnici.Outputs[Output]"
+                  name="Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[Meno]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Meno]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[Meno]"
+                      name="Meno" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[OsobnéČíslo]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[OsobnéČíslo]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[OsobnéČíslo]"
+                      name="OsobnéČíslo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[Id]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Id]"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Output].Columns[Id]"
+                      name="Id" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[ContentTypeID]"
+                      dataType="nText"
+                      name="ContentTypeID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Meno]"
+                      dataType="nText"
+                      name="Meno" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[OsobnéČíslo]"
+                      dataType="nText"
+                      name="OsobnéČíslo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[ComplianceAssetId]"
+                      dataType="nText"
+                      name="ComplianceAssetId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[ContentType]"
+                      dataType="nText"
+                      name="ContentType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Modified]"
+                      dataType="dbTimeStamp"
+                      name="Modified" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[CreatedById]"
+                      dataType="i4"
+                      name="CreatedById" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[ModifiedById]"
+                      dataType="i4"
+                      name="ModifiedById" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Owshiddenversion]"
+                      dataType="i4"
+                      name="Owshiddenversion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Version]"
+                      dataType="nText"
+                      name="Version" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Output].ExternalColumns[Path]"
+                      dataType="nText"
+                      name="Path" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Pracovnici.Outputs[Error output]"
+                  isErrorOut="true"
+                  name="Error output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ContentTypeID]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ContentTypeID]"
+                      name="ContentTypeID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Meno]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Meno]"
+                      name="Meno" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[OsobnéČíslo]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[OsobnéČíslo]"
+                      name="OsobnéČíslo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ComplianceAssetId]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ComplianceAssetId]"
+                      name="ComplianceAssetId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ContentType]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ContentType]"
+                      name="ContentType" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Modified]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Modified]"
+                      name="Modified" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Created]"
+                      name="Created" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[CreatedById]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[CreatedById]"
+                      name="CreatedById" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ModifiedById]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[ModifiedById]"
+                      name="ModifiedById" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Owshiddenversion]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Owshiddenversion]"
+                      name="Owshiddenversion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Version]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Version]"
+                      name="Version" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Path]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task\Pracovnici.Outputs[Error output].Columns[Path]"
+                      name="Path" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2018,6 +2668,11 @@
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion 3.Outputs[Data Conversion Output]" />
             <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output4]"
+              endId="Package\Data Flow Task\OLE DB Destination 4.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion 4.Outputs[Data Conversion Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[Output]"
               endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
               name="Output"
@@ -2036,9 +2691,35 @@
               refId="Package\Data Flow Task.Paths[Output3]"
               endId="Package\Data Flow Task\Data Conversion 3.Inputs[Data Conversion Input]"
               name="Output"
-              startId="Package\Data Flow Task\OData Source.Outputs[Output]" />
+              startId="Package\Data Flow Task\Pracovnici.Outputs[Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output4]"
+              endId="Package\Data Flow Task\Data Conversion 4.Inputs[Data Conversion Input]"
+              name="Output"
+              startId="Package\Data Flow Task\OData Source 1.Outputs[Output]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Select Only New Closed Requests"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3d27aec5-c547-4083-aac1-5457c7a136de}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Select Only New Closed Requests"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D2AAE26-E24A-490D-B701-BAF1F2F5C359}"
+          SQLTask:SqlStatementSource="SELECT ID &#xA;FROM [dbo].[tbl_Tmp]&#xA;WHERE ID NOT IN (&#xA;SELECT [RequestID]&#xA;FROM [dbo].[tbl_Evidence])&#xA;ORDER BY ID"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::NewClosed" />
+        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2067,6 +2748,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{9F9FCA14-7CA0-4E70-AC42-73DDCD362A75}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Select Only New Closed Requests" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2079,11 +2768,15 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="257.6,41.6"
           Id="Package\Data Flow Task"
           TopLeft="88.5714300797911,101.552942600712" />
+        <NodeLayout
+          Size="283.2,41.6"
+          Id="Package\Select Only New Closed Requests"
+          TopLeft="72.0000012261527,171.294120049394" />
         <NodeLayout
           Size="283.2,41.6"
           Id="Package\Truncate TMP tables"
@@ -2110,6 +2803,28 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="215.485715652972,143.152942600712">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.1411774486819"
+              Start="0,0"
+              End="0,20.6411774486819">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.6411774486819" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2119,61 +2834,41 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Data Flow Task\Data Conversion 4"
+          TopLeft="881.257153600576,127.858825322584" />
+        <NodeLayout
           Size="91.2,41.6"
           Id="Package\Data Flow Task\NS"
           TopLeft="94.8571444725504,34.2588240098788" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 4"
+          TopLeft="886.628582181736,194.541179198955" />
+        <NodeLayout
+          Size="94.4,41.6"
+          Id="Package\Data Flow Task\KPI"
+          TopLeft="506.285722907709,38.5411770111137" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Data Flow Task\Data Conversion 2"
+          TopLeft="475.428579525072,115.623531033341" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="54.2857152101945,195.764708627879" />
         <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="57.7142866971542,116.235295747803" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output]"
-          TopLeft="137.885715584852,75.8588240098788">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.3764717379244"
-              Start="0,0"
-              End="0,32.8764717379244">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.8764717379244" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="137.400000953674,157.835295747803">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37.9294128800758"
-              Start="0,0"
-              End="0,30.4294128800758">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.4294128800758" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 3"
+          TopLeft="680.914296506376,195.764708627879" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination 2"
+          TopLeft="465.714293645353,198.211767485728" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Data Flow Task\Data Conversion 1"
+          TopLeft="265.714290239373,110.729413317644" />
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\Data Flow Task\Statuses"
@@ -2183,9 +2878,99 @@
           Id="Package\Data Flow Task\OLE DB Destination 1"
           TopLeft="264.000004495893,199.435296914652" />
         <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\Data Flow Task\Pracovnici"
+          TopLeft="697.71429759629,50.7764713003561" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\OData Source 1"
+          TopLeft="895.771441932601,50.7764713003561" />
+        <NodeLayout
           Size="164.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion 1"
-          TopLeft="265.714290239373,110.729413317644" />
+          Id="Package\Data Flow Task\Data Conversion 3"
+          TopLeft="670.628582045497,123.576472321349" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="57.7142866971542,116.235295747803" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output4]"
+          TopLeft="972.1714419326,92.3764713003561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.51428833202431,35.4823540222274"
+              Start="0,0"
+              End="-8.51428833202431,27.9823540222274">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.7411770111137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7411770111137"
+                    Point2="0,17.7411770111137"
+                    Point3="-4,17.7411770111137" />
+                  <mssgle:LineSegment
+                    End="-4.51428833202431,17.7411770111137" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.51428833202431,17.7411770111137"
+                    Point2="-8.51428833202431,17.7411770111137"
+                    Point3="-8.51428833202431,21.7411770111137" />
+                  <mssgle:LineSegment
+                    End="-8.51428833202431,27.9823540222274" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output3]"
+          TopLeft="756.771439820893,92.3764713003561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.2000010209925"
+              Start="0,0"
+              End="0,23.7000010209925">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.7000010209925" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output2]"
+          TopLeft="555.657151216391,80.1411770111137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.4823540222274"
+              Start="0,0"
+              End="0,27.9823540222274">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.9823540222274" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output1]"
           TopLeft="346.514290409672,74.6352945809546">
@@ -2209,19 +2994,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output1]"
-          TopLeft="350.857147367633,152.329413317644">
+          Id="Package\Data Flow Task.Paths[Output]"
+          TopLeft="137.885715584852,75.8588240098788">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.1058835970076"
+              EndConnector="0,40.3764717379244"
               Start="0,0"
-              End="0,39.6058835970076">
+              End="0,32.8764717379244">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.6058835970076" />
+                    End="0,32.8764717379244" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2230,96 +3015,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="94.4,41.6"
-          Id="Package\Data Flow Task\KPI"
-          TopLeft="506.285722907709,38.5411770111137" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion 2"
-          TopLeft="475.428579525072,115.623531033341" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output2]"
-          TopLeft="555.657151216391,80.1411770111137">
+          Id="Package\Data Flow Task.Paths[Data Conversion Output4]"
+          TopLeft="963.657153600576,169.458825322584">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.4823540222274"
+              EndConnector="12.5714285811598,25.0823538763713"
               Start="0,0"
-              End="0,27.9823540222274">
+              End="12.5714285811598,17.5823538763713">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.9823540222274" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination 2"
-          TopLeft="465.714293645353,198.211767485728" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output2]"
-          TopLeft="556.571436585212,157.223531033341">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.9882364523864"
-              Start="0,0"
-              End="0,33.4882364523864">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.4882364523864" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\Data Flow Task\OData Source"
-          TopLeft="697.71429759629,50.7764713003561" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion 3"
-          TopLeft="670.628582045497,123.576472321349" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output3]"
-          TopLeft="769.31429759629,92.3764713003561">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16.2857155507926,31.2000010209925"
-              Start="0,0"
-              End="-16.2857155507926,23.7000010209925">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.6000005104963" />
+                    End="0,8.54117693818564" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.6000005104963"
-                    Point2="0,15.6000005104963"
-                    Point3="-4,15.6000005104963" />
+                    Point1="0,8.54117693818564"
+                    Point2="0,12.5411769381856"
+                    Point3="4,12.5411769381856" />
                   <mssgle:LineSegment
-                    End="-12.2857155507926,15.6000005104963" />
+                    End="8.57142858115981,12.5411769381856" />
                   <mssgle:CubicBezierSegment
-                    Point1="-12.2857155507926,15.6000005104963"
-                    Point2="-16.2857155507926,15.6000005104963"
-                    Point3="-16.2857155507926,19.6000005104963" />
+                    Point1="8.57142858115981,12.5411769381856"
+                    Point2="12.5714285811598,12.5411769381856"
+                    Point3="12.5714285811598,16.5411769381856" />
                   <mssgle:LineSegment
-                    End="-16.2857155507926,23.7000010209925" />
+                    End="12.5714285811598,17.5823538763713" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2328,10 +3049,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination 3"
-          TopLeft="680.914296506376,195.764708627879" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output3]"
           TopLeft="753.028582045497,165.176472321349">
@@ -2366,9 +3083,88 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output2]"
+          TopLeft="556.571436585212,157.223531033341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.9882364523864"
+              Start="0,0"
+              End="0,33.4882364523864">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.4882364523864" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output1]"
+          TopLeft="350.857147367633,152.329413317644">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.1058835970076"
+              Start="0,0"
+              End="0,39.6058835970076">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.6058835970076" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="137.400000953674,157.835295747803">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.9294128800758"
+              Start="0,0"
+              End="0,30.4294128800758">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4294128800758" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination 4">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
@@ -2383,7 +3179,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination 1">
+    design-time-name="Package\Data Flow Task\OLE DB Destination 3">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2409,7 +3205,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination 3">
+    design-time-name="Package\Data Flow Task\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

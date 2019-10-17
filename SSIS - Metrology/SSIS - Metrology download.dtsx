@@ -11,8 +11,8 @@
   DTS:LocaleID="1051"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="186"
-  DTS:VersionGUID="{21E81D9C-2F22-4D03-9CB2-8723021FB07D}">
+  DTS:VersionBuild="187"
+  DTS:VersionGUID="{10B28BE8-3DF4-49A0-BE9E-8BF035661458}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -4794,7 +4794,7 @@ where [refTable].[Id] = ?</property>
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="c_3DZeissValue"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\187:invalid" />
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\671:invalid" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -4814,7 +4814,7 @@ where [refTable].[Id] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                          name="Expression">[LEN]([REPLACENULL](#{Package\Loop Over Each NewClosed RequestId\Import Data\187:invalid},"")) &gt; 0</property>
+                          name="Expression">[LEN]([REPLACENULL](#{Package\Loop Over Each NewClosed RequestId\Import Data\671:invalid},"")) &gt; 0</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -6336,7 +6336,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[DľžkomerULM600]"
                           cachedDataType="r8"
                           cachedName="DľžkomerULM600"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\189:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DľžkomerULM600]">
                           <properties>
                             <property
                               containsID="true"
@@ -6352,10 +6352,9 @@ where [refTable].[Id] = ?</property>
                         </inputColumn>
                         <inputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[NazovSuciastky]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedDataType="nText"
                           cachedName="NazovSuciastky"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\182:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NazovSuciastky]">
                           <properties>
                             <property
                               containsID="true"
@@ -6371,10 +6370,9 @@ where [refTable].[Id] = ?</property>
                         </inputColumn>
                         <inputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[IDDielu]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedDataType="nText"
                           cachedName="IDDielu"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\183:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[IDDielu]">
                           <properties>
                             <property
                               containsID="true"
@@ -6392,7 +6390,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[PočetKusov]"
                           cachedDataType="r8"
                           cachedName="PočetKusov"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\184:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[PočetKusov]">
                           <properties>
                             <property
                               containsID="true"
@@ -6408,10 +6406,9 @@ where [refTable].[Id] = ?</property>
                         </inputColumn>
                         <inputColumn
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Operácia]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedDataType="nText"
                           cachedName="Operácia"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\185:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Operácia]">
                           <properties>
                             <property
                               containsID="true"
@@ -6429,7 +6426,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[NSId]"
                           cachedDataType="i4"
                           cachedName="NSId"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\186:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[NSId]">
                           <properties>
                             <property
                               containsID="true"
@@ -6447,7 +6444,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Programovanie]"
                           cachedDataType="r8"
                           cachedName="Programovanie"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\188:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Programovanie]">
                           <properties>
                             <property
                               containsID="true"
@@ -6465,7 +6462,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Flatmaster]"
                           cachedDataType="r8"
                           cachedName="Flatmaster"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\190:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Flatmaster]">
                           <properties>
                             <property
                               containsID="true"
@@ -6483,7 +6480,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[HommelT8000]"
                           cachedDataType="r8"
                           cachedName="HommelT8000"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\191:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[HommelT8000]">
                           <properties>
                             <property
                               containsID="true"
@@ -6501,7 +6498,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[MarsurfCD120]"
                           cachedDataType="r8"
                           cachedName="MarsurfCD120"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\192:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[MarsurfCD120]">
                           <properties>
                             <property
                               containsID="true"
@@ -6519,7 +6516,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[MikroskopUMM]"
                           cachedDataType="r8"
                           cachedName="MikroskopUMM"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\193:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[MikroskopUMM]">
                           <properties>
                             <property
                               containsID="true"
@@ -6537,7 +6534,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Surfcom1500]"
                           cachedDataType="r8"
                           cachedName="Surfcom1500"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\194:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Surfcom1500]">
                           <properties>
                             <property
                               containsID="true"
@@ -6555,7 +6552,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Talyrond200]"
                           cachedDataType="r8"
                           cachedName="Talyrond200"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\195:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Talyrond200]">
                           <properties>
                             <property
                               containsID="true"
@@ -6573,7 +6570,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[OsobnéČísloId]"
                           cachedDataType="i4"
                           cachedName="OsobnéČísloId"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\196:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[OsobnéČísloId]">
                           <properties>
                             <property
                               containsID="true"
@@ -6591,7 +6588,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[DôvodyMeraniaId]"
                           cachedDataType="i4"
                           cachedName="DôvodyMeraniaId"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\197:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[DôvodyMeraniaId]">
                           <properties>
                             <property
                               containsID="true"
@@ -6609,7 +6606,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Modified]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Modified"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\198:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Modified]">
                           <properties>
                             <property
                               containsID="true"
@@ -6627,7 +6624,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Created]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Created"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\199:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Created]">
                           <properties>
                             <property
                               containsID="true"
@@ -6645,7 +6642,7 @@ where [refTable].[Id] = ?</property>
                           refId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input].Columns[Id]"
                           cachedDataType="i4"
                           cachedName="Id"
-                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\200:invalid">
+                          lineageId="Package\Loop Over Each NewClosed RequestId\Import Data\PoziadavkyNaMeranie.Outputs[Output].Columns[Id]">
                           <properties>
                             <property
                               containsID="true"
@@ -6865,24 +6862,24 @@ where [refTable].[Id] = ?</property>
                   startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Team.Outputs[Match Team]" />
                 <path
                   refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output3]"
-                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Device Name.Inputs[OLE DB Destination Input]"
+                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow KPI.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
-                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Device.Outputs[No Match Device]" />
+                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup KPI.Outputs[No Match KPI]" />
                 <path
                   refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output2]"
-                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Operators.Inputs[OLE DB Destination Input]"
-                  name="Lookup No Match Output"
-                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Operators.Outputs[No Match Operators]" />
-                <path
-                  refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output1]"
                   endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Team.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
                   startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Team.Outputs[No Match Team]" />
                 <path
-                  refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output]"
-                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow KPI.Inputs[OLE DB Destination Input]"
+                  refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output1]"
+                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Operators.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
-                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup KPI.Outputs[No Match KPI]" />
+                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Operators.Outputs[No Match Operators]" />
+                <path
+                  refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output]"
+                  endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Device Name.Inputs[OLE DB Destination Input]"
+                  name="Lookup No Match Output"
+                  startId="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup Device.Outputs[No Match Device]" />
                 <path
                   refId="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Multicast Output 1]"
                   endId="Package\Loop Over Each NewClosed RequestId\Import Data\Unpivot Devices.Inputs[Unpivot Input]"
@@ -7583,6 +7580,19 @@ where [refTable].[Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Import LookUp Tables And Data\tbl_Operators">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Import LookUp Tables And Data\tbl_Tmp">
     <Properties>
       <Property>
@@ -7597,19 +7607,6 @@ where [refTable].[Id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Import LookUp Tables And Data\tbl_KPI">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import LookUp Tables And Data\tbl_Operators">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7909,7 +7906,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output3]"
+          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output]"
           TopLeft="432.866685832871,849.992728511002">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7933,7 +7930,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output2]"
+          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output1]"
           TopLeft="432.866685832871,1030.69091063875">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7957,7 +7954,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output1]"
+          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output2]"
           TopLeft="432.866685832871,669.294546383252">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -7981,7 +7978,7 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output]"
+          Id="Package\Loop Over Each NewClosed RequestId\Import Data.Paths[Lookup No Match Output3]"
           TopLeft="432.866685832871,940.341819574878">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8242,32 +8239,6 @@ where [refTable].[Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\tbl_Evidence">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Team">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Lookup KPI">
     <Properties>
       <Property>
@@ -8291,7 +8262,7 @@ where [refTable].[Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Device Name">
+    design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow KPI">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8305,6 +8276,19 @@ where [refTable].[Id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Operators">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\tbl_Evidence">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8340,6 +8324,19 @@ where [refTable].[Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Device Name">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Data With NubmerOf pcs Eq 0">
     <Properties>
       <Property>
@@ -8353,7 +8350,7 @@ where [refTable].[Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow KPI">
+    design-time-name="Package\Loop Over Each NewClosed RequestId\Import Data\Unknow Team">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
